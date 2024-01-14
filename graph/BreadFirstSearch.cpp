@@ -38,9 +38,7 @@ int main() {
     addLine(3, 7);
     addLine(2, 6);
     addLine(1, 4);
-    for(int i = 1; i <= 7; i++) {
-        visited.push_back(false);
-    }
+    visited.resize(8, false);
     bfs(1);
     return 0;
 }

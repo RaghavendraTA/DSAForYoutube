@@ -51,10 +51,8 @@ int main() {
     addLine('C', 'D', 1);
     addLine('C', 'E', 2);
     addLine('D', 'E', 4);
-    for(int i = 0; i <= 256; i++) {
-        visited.push_back(false);
-        cost.push_back(INF);
-    }
+    visited.resize(257, false);
+    visited.resize(257, INF);
     dijkstra('A');
     for(int i = 2; i <= 5; i++) {
         cout << (char)(i + 64) << "=" << cost[i + 64] << ", ";
